@@ -1,0 +1,23 @@
+// css rules for basic page layout and shape. Gene
+
+$background-color: linear-gradient(
+  to bottom,
+  black 0%,
+  #333 25%,
+  #ccc 75%,
+  white 100%
+);
+$background-color-2: red;
+$accent-color-1: gold;
+$text-color: white;
+$secondary-text-color: black;
+$font-primary: "Inter", sans-serif;
+$box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+body {
+  background: $background-color;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 3rem;
+  position: relative;
+  font-family: $font-primary;
+}

@@ -1,3 +1,110 @@
+body {
+  background: linear-gradient(to bottom, black 0%, #333 25%, #ccc 75%, white 100%);
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 3rem;
+  position: relative;
+  font-family: "Inter", sans-serif;
+}
 
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(to right, #b22222 0%, #8a1f1f 50%, #671f1f 100%);
+}
+nav ul {
+  width: 40%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+header {
+  color: white;
+  padding: 3rem;
+  text-align: center;
+}
+header h1 {
+  font-size: 5rem;
+  font-weight: 700;
+}
+header .link-github svg {
+  width: 50px;
+  height: 50px;
+}
+header .link-github svg path {
+  fill: gold;
+}
+
+#about {
+  width: 70%;
+  height: 600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  align-items: center;
+  padding: 1rem;
+}
+#about .container {
+  width: 50%;
+  height: 100%;
+  border: 3px solid gold;
+  background-color: red;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  overflow-y: auto;
+}
+
+#guidelines {
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#contribute {
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+#contribute .container:nth-of-type(2) {
+  text-align: left;
+}
+#contribute .container:nth-of-type(2) h3 {
+  font-size: larger;
+}
+#contribute .container:nth-of-type(2) ol {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#contribute .container:nth-of-type(2) li {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: forestgreen;
+  list-style: none;
+  width: 20%;
+  height: 120px;
+}
+
+/* things to look out for and implement later
+more variables
+mixins
+nested media queries
+*/
 
 /*# sourceMappingURL=style.css.map */
