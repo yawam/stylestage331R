@@ -1,0 +1,27 @@
+.profile .container {
+  
+    max-width: 80%;
+    margin:0 auto;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .profile .container h4 {
+    text-align: center;
+  }
+  .profile .container ul {
+    display: flex;
+    justify-content: space-around;
+    margin:0 auto;
+    list-style: none;
+  }
+
+  .profile .container > a[href="/styles/css/main-stage.css"] {
+    text-decoration: none;
+    color:white;
+    background-color: $accent-color-1;
+    padding:3px;
+    border-radius: 5px;
+    
+}
+

@@ -1,0 +1,41 @@
+#styles .container h2{
+    text-align: center;
+    
+
+}
+
+#styles .container ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+#styles .container ul li{
+    border: 0.5 solid black;
+    box-shadow: $box-shadow;
+    background-color:lightgray ;
+    border-radius: 5px;
+    text-decoration: none;
+    width: 200px;
+    height: 40px;
+    padding:5px;
+    text-align: center;
+}
+
+#styles .container{
+    text-align: center;
+    
+}
+#styles .container a{
+    text-decoration: none;
+    
+}
+#styles .container > a[href="/styles/"]{
+    text-decoration: none;
+    color:white;
+    background-color: $accent-color-1;
+    padding:3px;
+    border-radius: 5px;
+}
+
+
