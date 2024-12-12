@@ -1,14 +1,49 @@
-#files a{
-  background-color:$accent-color-1;
-  padding: 10px 10px;
-  border-radius: 10px;
-  margin:60px;
-  text-decoration: none;
-  color:rgb(253, 253, 253);
+#files .container a{
+  display: inline-block;
+    color: #fff;
+    background: linear-gradient(90deg, #ffd700, #ffb300);
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+}
+#files .container a:hover{
+  animation: shake 0.5s linear;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+#files .container a:hover::after{
+  content: "";
+  position: absolute;
+  top: 100%; 
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background-color: gold;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: dust-fall 2s ease-out infinite;
+}
+#files .container a:hover::before{
+  content: "";
+    position: absolute;
+    top: 100%; 
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background-color: gold;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: dust-fall 2s ease-out 0.5s infinite;
+    transform: translateX(10px);
 }
 
 #files .container h3{
   color:forestgreen;
+  font-size:1.4em;
 }
 .page-footer{
     text-align: center;

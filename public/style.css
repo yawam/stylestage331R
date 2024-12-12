@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   background: linear-gradient(to bottom, black 0%, #333 55%, #ccc 75%, white 100%);
   margin: 0 auto;
@@ -69,17 +70,98 @@ header .link-github svg path {
   overflow-y: auto;
 }
 
-#guidelines {
-  max-width: 80%;
-  margin: 0 auto;
+/* General Styling */
+#guidelines,
+a {
   text-align: center;
-  color: lightgrey;
+  font-family: "Arial", sans-serif;
+  color: #5fb95f;
+  position: relative;
 }
 
-#guidelines a {
-  color: lightgrey;
+/* Golden star at the top */
+#guidelines::before {
+  content: "★";
+  font-size: 3em;
+  color: gold;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
+/* Top of the tree */
+#guidelines h2 {
+  font-size: 1.8em;
+  color: #5fb95f;
+  /* Deep green */
+  margin-bottom: 10px;
+}
+
+#guidelines p:nth-child(1),
+#guidelines p:nth-child(2),
+#guidelines p:nth-child(3) {
+  max-width: 20%;
+  margin: 5px auto;
+}
+
+#guidelines p:nth-child(4) {
+  max-width: 40%;
+  margin: 5px auto;
+}
+
+#guidelines p:nth-child(5) {
+  max-width: 50%;
+  margin: 5px auto;
+}
+
+#guidelines p:nth-child(6) {
+  max-width: 45%;
+  margin: 5px auto;
+}
+
+#guidelines a.link-guidelines {
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  font-size: 1.1em;
+  color: white;
+  background-color: #8b4513;
+  padding: 10px 15px;
+  border-radius: 5px;
+  width: 15%;
+}
+
+#guidelines a.link-guidelines:hover {
+  background-color: #a0522d;
+}
+
+#guidelines .container {
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+#guidelines .container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  animation: snowfall 8s infinite linear;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 4%, transparent 0) 10px 10px/30px 30px, radial-gradient(circle, rgba(255, 255, 255, 0.7) 4%, transparent 0) 50px 50px/40px 40px, radial-gradient(circle, rgba(255, 255, 255, 0.5) 4%, transparent 0) 80px 80px/35px 35px;
+}
+
+@keyframes snowfall {
+  0% {
+    background-position: 0 0, 0 0, 0 0;
+  }
+  100% {
+    background-position: 0 100vh, 0 110vh, 0 120vh;
+  }
+}
 #contribute {
   max-width: 80%;
   margin: 0 auto;
@@ -106,10 +188,26 @@ header .link-github svg path {
   width: 23%;
   height: 120px;
   overflow: hidden;
+  text-align: center;
+  margin: 0 auto;
 }
 
 #contribute .container h3 {
   text-align: center;
+  font-size: 2rem;
+  color: lightgrey;
+}
+
+#contribute .container h2 {
+  font-size: 2.7rem;
+}
+
+#contribute .container a {
+  color: lightgrey;
+}
+
+#contribute .container p {
+  font-size: 1.1rem;
 }
 
 .profile .container {
@@ -177,17 +275,54 @@ header .link-github svg path {
   border-radius: 5px;
 }
 
-#files a {
-  background-color: #FCC224;
-  padding: 10px 10px;
-  border-radius: 10px;
-  margin: 60px;
+#files .container a {
+  display: inline-block;
+  color: #fff;
+  background: linear-gradient(90deg, #ffd700, #ffb300);
+  padding: 5px 10px;
+  border-radius: 5px;
   text-decoration: none;
-  color: #fdfdfd;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+
+#files .container a:hover {
+  animation: shake 0.5s linear;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+#files .container a:hover::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background-color: gold;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: dust-fall 2s ease-out infinite;
+}
+
+#files .container a:hover::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background-color: gold;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: dust-fall 2s ease-out 0.5s infinite;
+  transform: translateX(10px);
 }
 
 #files .container h3 {
   color: forestgreen;
+  font-size: 1.4em;
 }
 
 .page-footer {
