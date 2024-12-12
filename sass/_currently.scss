@@ -8,20 +8,105 @@
   
   .profile .container h4 {
     text-align: center;
-  }
+    color: forestgreen;
+ font-size: 1.3rem; }
   .profile .container ul {
     display: flex;
     justify-content: space-around;
     margin:0 auto;
     list-style: none;
   }
-
-  .profile .container > a[href="/styles/css/main-stage.css"] {
-    text-decoration: none;
-    color:white;
-    background-color: $accent-color-1;
-    padding:3px;
-    border-radius: 5px;
+  .profile .container ul li{
+    display: inline-block;
+    color: rgb(88, 82, 82);
     
+    background: linear-gradient(90deg, #ffd700, #ffb300);
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+  }
+
+  .profile .container ul li:hover
+  {
+    animation: shake 0.5s linear;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+  }
+  .profile .container ul li:hover::after
+  {
+    content: "";
+    position: absolute;
+    top: 100%; /* Below the link */
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background-color: gold;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: dust-fall 2s ease-out infinite;
+  }
+.profile .container ul li:hover::before
+{
+  content: "";
+  position: absolute;
+  top: 100%; /* Below the link */
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background-color: gold;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: dust-fall 2s ease-out 0.5s infinite;
+  transform: translateX(10px);
 }
 
+  .profile .container > a[href="/styles/css/main-stage.css"] {
+    
+    display: inline-block;
+    color: rgb(88, 82, 82);
+    
+    background: linear-gradient(90deg, #ffd700, #ffb300);
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    margin:20px;
+}
+.profile .container > a[href="/styles/css/main-stage.css"]:hover
+  {
+    animation: shake 0.5s linear;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+  }
+  .profile .container > a[href="/styles/css/main-stage.css"]:hover::after
+  {
+    content: "";
+    position: absolute;
+    top: 100%; /* Below the link */
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background-color: gold;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: dust-fall 2s ease-out infinite;
+  }
+  .profile .container > a[href="/styles/css/main-stage.css"]:hover::before
+{
+  content: "";
+  position: absolute;
+  top: 100%; /* Below the link */
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background-color: gold;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: dust-fall 2s ease-out 0.5s infinite;
+  transform: translateX(10px);
+}

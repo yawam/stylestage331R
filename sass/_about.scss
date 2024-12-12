@@ -1,6 +1,6 @@
 #about {
   width: 70%;
-  height: 600px;
+  height: 480px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -24,25 +24,25 @@
     text-align: center;
 
     /* Scrollbar styling */
-    scrollbar-width: thin; /* For Firefox: Thin scrollbar */
-    scrollbar-color: rgba(0, 0, 0, 0.8) transparent; /* Thumb and track colors */
+    scrollbar-width: thin; 
+    scrollbar-color: rgba(0, 0, 0, 0.8) transparent; 
 
-    /* WebKit Browsers (e.g., Chrome, Edge, Safari) */
+    
     &::-webkit-scrollbar {
-      width: 6px; /* Thin scrollbar */
+      width: 6px; 
     }
 
     &::-webkit-scrollbar-track {
-      background: transparent; /* Transparent track background */
+      background: transparent; 
     }
 
     &::-webkit-scrollbar-thumb {
-      background: rgba(0, 0, 0, 0.8); /* Opaque black thumb */
-      border-radius: 3px; /* Rounded corners for thumb */
+      background: rgba(0, 0, 0, 0.8); 
+      border-radius: 3px; 
     }
 
     &::-webkit-scrollbar-thumb:hover {
-      background: rgba(0, 0, 0, 1); /* Fully opaque black on hover */
+      background: rgba(0, 0, 0, 1); 
     }
   }
 
@@ -60,20 +60,20 @@
 
   ul {
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping of items to a new line */
-    gap: 0.5rem; /* Add spacing between the list items */
-    list-style: none; /* Remove default bullet points */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
+    flex-wrap: wrap; 
+    gap: 0.5rem; 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
   }
 
   li {
-    background: forestgreen; /* Set background to green */
-    color: white; /* Optional: Set text color for contrast */
-    padding: 0.5rem; /* Add padding inside each item */
-    border-radius: 5px; /* Optional: Add rounded corners */
-    flex: 1 1 auto; /* Allow items to grow, shrink, and set a minimum width */
-    text-align: center; /* Optional: Center the text inside the items */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    background: rgb(27, 108, 27);
+    color: white; 
+    padding: 0.5rem; 
+    border-radius: 5px; 
+    flex: 1 1 auto; 
+    text-align: center; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   }
 }

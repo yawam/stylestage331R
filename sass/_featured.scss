@@ -1,6 +1,6 @@
 #styles .container h2{
     text-align: center;
-    color: lightgrey;
+    color: forestgreen;
     
 
 }
@@ -14,13 +14,49 @@
 #styles .container ul li{
     border: 0.5 solid black;
     box-shadow: $box-shadow;
-    background-color:lightgray ;
-    border-radius: 5px;
+    background-color:#B22222 ;
+    border-radius: 10px;
+    border: 3px solid $accent-color-1;
     text-decoration: none;
+    color:lightgrey;
     width: 200px;
     height: 40px;
     padding:5px;
     text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+}
+#styles .container ul li:hover
+  {
+    animation: shake 0.5s linear;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+  }
+  #styles .container ul li:hover::after
+  {
+    content: "";
+    position: absolute;
+    top: 100%; /* Below the link */
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background-color: gold;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: dust-fall 2s ease-out infinite;
+  }
+  #styles .container ul li:hover::before
+{
+  content: "";
+  position: absolute;
+  top: 100%; /* Below the link */
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background-color: gold;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: dust-fall 2s ease-out 0.5s infinite;
+  transform: translateX(10px);
 }
 
 #styles .container{
@@ -32,11 +68,49 @@
     
 }
 #styles .container > a[href="/styles/"]{
-    text-decoration: none;
-    color:white;
-    background-color: $accent-color-1;
-    padding:3px;
+    display: inline-block;
+    color: rgb(88, 82, 82);
+    margin:20px;
+    background: linear-gradient(90deg, #ffd700, #ffb300);
+    padding: 5px 10px;
     border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+}
+#styles .container > a[href="/styles/"]:hover
+  {
+    animation: shake 0.5s linear;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+  }
+  #styles .container > a[href="/styles/"]:hover::after
+  {
+    content: "";
+    position: absolute;
+    top: 100%; /* Below the link */
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background-color: gold;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: dust-fall 2s ease-out infinite;
+  }
+  #styles .container > a[href="/styles/"]:hover::before
+{
+  content: "";
+  position: absolute;
+  top: 100%; /* Below the link */
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background-color: gold;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: dust-fall 2s ease-out 0.5s infinite;
+  transform: translateX(10px);
 }
 
 

@@ -1,6 +1,6 @@
 #files .container a{
   display: inline-block;
-    color: #fff;
+    color: rgb(88, 82, 82);
     background: linear-gradient(90deg, #ffd700, #ffb300);
     padding: 5px 10px;
     border-radius: 5px;
@@ -47,7 +47,7 @@
 }
 .page-footer{
     text-align: center;
-    background-color: lightgrey;
+   
 }
 .link-github svg {
     width: 50px;
@@ -60,4 +60,101 @@
 
 .page-footer .container ul{
  list-style: none;
+}
+
+
+.page-footer {
+  background: rgb(27, 108, 27); /* Festive green gradient */
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  border-radius: 5px;
+}
+
+
+.page-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 2%, transparent 0) 10px 10px / 30px 30px,
+    radial-gradient(circle, rgba(255, 255, 255, 0.5) 2%, transparent 0) 50px 50px / 40px 40px;
+  animation: snowfall 10s linear infinite;
+  z-index: 1;
+}
+
+@keyframes snowfall {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 0 100vh, 0 120vh;
+  }
+}
+
+/* Footer Links */
+.page-footer a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 2; 
+}
+
+.page-footer a:hover {
+  color: #ff6347; 
+}
+
+/* List Styling */
+.page-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  z-index: 2; 
+}
+
+.page-footer ul li {
+  display: inline-block;
+}
+
+/* Decorative Icons */
+.page-footer ul li a::before {
+  content: '🎄'; 
+  margin-right: 5px;
+  display: inline-block;
+}
+
+/* Footer Text Enhancements */
+.page-footer p {
+  margin: 10px 0;
+  font-size: 0.9em;
+  z-index: 2; 
+}
+
+/* Optional: Holly Decoration on the Header */
+.page-footer .container::before {
+  content: '❄️';
+  position: absolute;
+  top: -10px;
+  left: 10%;
+  font-size: 1.5em;
+  z-index: 2;
+}
+
+.page-footer .container::after {
+  content: '❄️';
+  position: absolute;
+  top: -10px;
+  right: 10%;
+  font-size: 1.5em;
+  z-index: 2;
 }

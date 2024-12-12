@@ -1,12 +1,6 @@
 @charset "UTF-8";
 body {
-  background: linear-gradient(
-    to bottom,
-    black 0%,
-    #333 55%,
-    #ccc 75%,
-    white 100%
-  );
+  background: linear-gradient(to bottom, black 0%, #333 55%, #ccc 75%, white 100%);
   margin: 0 auto;
   max-width: 100%;
   padding: 3rem;
@@ -14,6 +8,54 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+/* Snowfall effect */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 2%, transparent 0) 10px 10px/30px 30px, radial-gradient(circle, rgba(255, 255, 255, 0.4) 2%, transparent 0) 50px 50px/40px 40px, radial-gradient(circle, rgba(255, 255, 255, 0.3) 2%, transparent 0) 80px 80px/35px 35px;
+  animation: snowfall 10s linear infinite;
+  z-index: 1;
+}
+
+/* Subtle Gold Dust Effect */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(255, 223, 0, 0.5) 3%, transparent 0) 20px 20px/50px 50px, radial-gradient(circle, rgba(255, 223, 0, 0.4) 3%, transparent 0) 70px 70px/70px 70px, radial-gradient(circle, rgba(255, 223, 0, 0.3) 3%, transparent 0) 100px 100px/90px 90px;
+  animation: goldDust 4s ease-in-out infinite;
+  z-index: 2;
+}
+
+/* Keyframes for snowfall */
+@keyframes snowfall {
+  0% {
+    background-position: 0 0, 0 0, 0 0;
+  }
+  100% {
+    background-position: 0 100vh, 0 120vh, 0 150vh;
+  }
+}
+/* Keyframes for subtle pulsating gold dust */
+@keyframes goldDust {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
 nav {
   position: absolute;
   top: 0;
@@ -60,8 +102,7 @@ nav ul li a:hover::after {
 }
 
 @keyframes shake {
-  0%,
-  100% {
+  0%, 100% {
     transform: translateX(0);
   }
   25% {
@@ -114,8 +155,7 @@ header .link-github svg path {
   fill: gold;
 }
 header a[href="https://twitter.com/5t3ph"],
-header a[href="https://moderncss.dev"]
-{
+header a[href="https://moderncss.dev"] {
   display: inline-block;
   color: #fff;
   background: linear-gradient(90deg, #ffd700, #ffb300);
@@ -128,14 +168,12 @@ header a[href="https://moderncss.dev"]
   position: relative;
 }
 header a[href="https://twitter.com/5t3ph"]:hover,
-header a[href="https://moderncss.dev"]:hover
-{
+header a[href="https://moderncss.dev"]:hover {
   animation: shake 0.5s linear;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
 }
 header a[href="https://twitter.com/5t3ph"]:hover::after,
-header a[href="https://moderncss.dev"]:hover::after
-{
+header a[href="https://moderncss.dev"]:hover::after {
   content: "";
   position: absolute;
   top: 100%;
@@ -149,8 +187,7 @@ header a[href="https://moderncss.dev"]:hover::after
   animation: dust-fall 2s ease-out infinite;
 }
 header a[href="https://twitter.com/5t3ph"]:hover::before,
-header a[href="https://moderncss.dev"]:hover::before
-{
+header a[href="https://moderncss.dev"]:hover::before {
   content: "";
   position: absolute;
   top: 100%;
@@ -226,8 +263,7 @@ header .link-github span::after {
   /* Space between SVG and line */
 }
 @keyframes shake {
-  0%,
-  100% {
+  0%, 100% {
     transform: translateX(0);
   }
   25% {
@@ -257,7 +293,7 @@ header .link-github span::after {
 
 #about {
   width: 70%;
-  height: 600px;
+  height: 480px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -280,28 +316,20 @@ header .link-github span::after {
   text-align: center;
   /* Scrollbar styling */
   scrollbar-width: thin;
-  /* For Firefox: Thin scrollbar */
   scrollbar-color: rgba(0, 0, 0, 0.8) transparent;
-  /* Thumb and track colors */
-  /* WebKit Browsers (e.g., Chrome, Edge, Safari) */
 }
 #about .container::-webkit-scrollbar {
   width: 6px;
-  /* Thin scrollbar */
 }
 #about .container::-webkit-scrollbar-track {
   background: transparent;
-  /* Transparent track background */
 }
 #about .container::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.8);
-  /* Opaque black thumb */
   border-radius: 3px;
-  /* Rounded corners for thumb */
 }
 #about .container::-webkit-scrollbar-thumb:hover {
   background: black;
-  /* Fully opaque black on hover */
 }
 #about .container blockquote {
   background: rgba(255, 255, 255, 0.41);
@@ -316,31 +344,19 @@ header .link-github span::after {
 #about ul {
   display: flex;
   flex-wrap: wrap;
-  /* Allow wrapping of items to a new line */
   gap: 0.5rem;
-  /* Add spacing between the list items */
   list-style: none;
-  /* Remove default bullet points */
   padding: 0;
-  /* Remove default padding */
   margin: 0;
-  /* Remove default margin */
 }
 #about li {
-  background: forestgreen;
-  /* Set background to green */
+  background: #1b6c1b;
   color: white;
-  /* Optional: Set text color for contrast */
   padding: 0.5rem;
-  /* Add padding inside each item */
   border-radius: 5px;
-  /* Optional: Add rounded corners */
   flex: 1 1 auto;
-  /* Allow items to grow, shrink, and set a minimum width */
   text-align: center;
-  /* Optional: Center the text inside the items */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  /* Optional: Add a subtle shadow */
 }
 
 /* General Styling */
@@ -423,17 +439,6 @@ a {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  animation: snowfall 8s infinite linear;
-  background: radial-gradient(
-        circle,
-        rgba(255, 255, 255, 0.9) 4%,
-        transparent 0
-      )
-      10px 10px/30px 30px,
-    radial-gradient(circle, rgba(255, 255, 255, 0.7) 4%, transparent 0) 50px
-      50px/40px 40px,
-    radial-gradient(circle, rgba(255, 255, 255, 0.5) 4%, transparent 0) 80px
-      80px/35px 35px;
 }
 
 @keyframes snowfall {
@@ -462,13 +467,13 @@ a {
   align-items: center;
 }
 #contribute .container:nth-of-type(2) li {
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 8px 10px -6px rgba(0, 0, 0, 0.1);
-  padding: 0.5rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  padding-top: 30px;
   border-radius: 0.5rem;
-  background-color: forestgreen;
+  background-color: #1b6c1b;
   list-style: none;
-  width: 23%;
+  width: 20%;
   height: 120px;
   overflow: hidden;
   text-align: center;
@@ -502,6 +507,8 @@ a {
 
 .profile .container h4 {
   text-align: center;
+  color: forestgreen;
+  font-size: 1.3rem;
 }
 
 .profile .container ul {
@@ -511,17 +518,104 @@ a {
   list-style: none;
 }
 
-.profile .container > a[href="/styles/css/main-stage.css"] {
-  text-decoration: none;
-  color: white;
-  background-color: #fcc224;
-  padding: 3px;
+.profile .container ul li {
+  display: inline-block;
+  color: #585252;
+  background: linear-gradient(90deg, #ffd700, #ffb300);
+  padding: 5px 10px;
   border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+
+.profile .container ul li:hover {
+  animation: shake 0.5s linear;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+.profile .container ul li:hover::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  /* Below the link */
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background-color: gold;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: dust-fall 2s ease-out infinite;
+}
+
+.profile .container ul li:hover::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  /* Below the link */
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background-color: gold;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: dust-fall 2s ease-out 0.5s infinite;
+  transform: translateX(10px);
+}
+
+.profile .container > a[href="/styles/css/main-stage.css"] {
+  display: inline-block;
+  color: #585252;
+  background: linear-gradient(90deg, #ffd700, #ffb300);
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  margin: 20px;
+}
+
+.profile .container > a[href="/styles/css/main-stage.css"]:hover {
+  animation: shake 0.5s linear;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+.profile .container > a[href="/styles/css/main-stage.css"]:hover::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  /* Below the link */
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background-color: gold;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: dust-fall 2s ease-out infinite;
+}
+
+.profile .container > a[href="/styles/css/main-stage.css"]:hover::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  /* Below the link */
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background-color: gold;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: dust-fall 2s ease-out 0.5s infinite;
+  transform: translateX(10px);
 }
 
 #styles .container h2 {
   text-align: center;
-  color: lightgrey;
+  color: forestgreen;
 }
 
 #styles .container ul {
@@ -532,15 +626,52 @@ a {
 
 #styles .container ul li {
   border: 0.5 solid black;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 8px 10px -6px rgba(0, 0, 0, 0.1);
-  background-color: lightgray;
-  border-radius: 5px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  background-color: #B22222;
+  border-radius: 10px;
+  border: 3px solid #fcc224;
   text-decoration: none;
+  color: lightgrey;
   width: 200px;
   height: 40px;
   padding: 5px;
   text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+
+#styles .container ul li:hover {
+  animation: shake 0.5s linear;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+#styles .container ul li:hover::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  /* Below the link */
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background-color: gold;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: dust-fall 2s ease-out infinite;
+}
+
+#styles .container ul li:hover::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  /* Below the link */
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background-color: gold;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: dust-fall 2s ease-out 0.5s infinite;
+  transform: translateX(10px);
 }
 
 #styles .container {
@@ -552,23 +683,59 @@ a {
 }
 
 #styles .container > a[href="/styles/"] {
-  text-decoration: none;
-  color: white;
-  background-color: #fcc224;
-  padding: 3px;
+  display: inline-block;
+  color: #585252;
+  margin: 20px;
+  background: linear-gradient(90deg, #ffd700, #ffb300);
+  padding: 5px 10px;
   border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+
+#styles .container > a[href="/styles/"]:hover {
+  animation: shake 0.5s linear;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+#styles .container > a[href="/styles/"]:hover::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  /* Below the link */
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background-color: gold;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: dust-fall 2s ease-out infinite;
+}
+
+#styles .container > a[href="/styles/"]:hover::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  /* Below the link */
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background-color: gold;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: dust-fall 2s ease-out 0.5s infinite;
+  transform: translateX(10px);
 }
 
 #files .container a {
   display: inline-block;
-  color: #fff;
+  color: #585252;
   background: linear-gradient(90deg, #ffd700, #ffb300);
   padding: 5px 10px;
   border-radius: 5px;
-  background-color: #fcc224;
-  padding: 10px 10px;
-  border-radius: 10px;
-  margin: 60px;
   text-decoration: none;
   font-weight: bold;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -615,7 +782,6 @@ a {
 
 .page-footer {
   text-align: center;
-  background-color: lightgrey;
 }
 
 .link-github svg {
@@ -628,6 +794,100 @@ a {
 
 .page-footer .container ul {
   list-style: none;
+}
+
+.page-footer {
+  background: #1b6c1b;
+  /* Festive green gradient */
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  font-family: "Arial", sans-serif;
+  position: relative;
+  border-radius: 5px;
+}
+
+.page-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 2%, transparent 0) 10px 10px/30px 30px, radial-gradient(circle, rgba(255, 255, 255, 0.5) 2%, transparent 0) 50px 50px/40px 40px;
+  animation: snowfall 10s linear infinite;
+  z-index: 1;
+}
+
+@keyframes snowfall {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 0 100vh, 0 120vh;
+  }
+}
+/* Footer Links */
+.page-footer a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.page-footer a:hover {
+  color: #ff6347;
+}
+
+/* List Styling */
+.page-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  z-index: 2;
+}
+
+.page-footer ul li {
+  display: inline-block;
+}
+
+/* Decorative Icons */
+.page-footer ul li a::before {
+  content: "🎄";
+  margin-right: 5px;
+  display: inline-block;
+}
+
+/* Footer Text Enhancements */
+.page-footer p {
+  margin: 10px 0;
+  font-size: 0.9em;
+  z-index: 2;
+}
+
+/* Optional: Holly Decoration on the Header */
+.page-footer .container::before {
+  content: "❄️";
+  position: absolute;
+  top: -10px;
+  left: 10%;
+  font-size: 1.5em;
+  z-index: 2;
+}
+
+.page-footer .container::after {
+  content: "❄️";
+  position: absolute;
+  top: -10px;
+  right: 10%;
+  font-size: 1.5em;
+  z-index: 2;
 }
 
 /* things to look out for and implement later

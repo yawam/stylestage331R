@@ -17,11 +17,12 @@
     }
     li {
       box-shadow: $box-shadow;
-      padding: 0.5rem;
+      padding:5px;
+      padding-top:30px;
       border-radius: 0.5rem;
-      background-color: forestgreen;
+      background-color: rgb(27, 108, 27);
       list-style: none;
-      width: 23%;
+      width: 20%;
       height: 120px;
       overflow: hidden;
       text-align:center;
