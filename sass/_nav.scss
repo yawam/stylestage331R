@@ -4,6 +4,13 @@ $nav-background: linear-gradient(
   #8a1f1f 50%,
   #671f1f 100%
 );
+
+$gold-dust: radial-gradient(
+  circle,
+  gold 0%,
+  transparent 100%
+); // Gold dust effect
+
 nav {
   position: absolute;
   top: 0;
@@ -26,9 +33,59 @@ nav {
 
     li {
       a {
-        color: $text-color;
+        color: $accent-color-1;
         text-decoration: none;
+        position: relative;
+        display: inline-block;
+        transition: transform 0.2s;
+
+        &:hover {
+          animation: shake 0.5s linear;
+        }
+
+        &:hover::after {
+          content: "";
+          position: absolute;
+          top: 100%; /* Below the link */
+          left: 50%;
+          transform: translateX(-50%);
+          width: 5px;
+          height: 5px;
+          background: $gold-dust;
+          animation: gold-dust 1s ease-out;
+          pointer-events: none;
+          opacity: 0;
+        }
       }
     }
+  }
+}
+
+// Shake animation
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+}
+
+// Gold dust animation
+@keyframes gold-dust {
+  0% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) translateY(20px);
+    opacity: 0;
   }
 }
