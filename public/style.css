@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(to bottom, black 0%, #333 25%, #ccc 75%, white 100%);
+  background: linear-gradient(to bottom, black 0%, #333 55%, #ccc 75%, white 100%);
   margin: 0 auto;
   max-width: 100%;
   padding: 3rem;
@@ -62,7 +62,7 @@ header .link-github svg path {
 #about .container {
   width: 50%;
   height: 100%;
-  border: 3px solid gold;
+  border: 3px solid #FCC224;
   background-color: red;
   border-radius: 0.5rem;
   padding: 0.5rem;
@@ -73,12 +73,18 @@ header .link-github svg path {
   max-width: 80%;
   margin: 0 auto;
   text-align: center;
+  color: lightgrey;
+}
+
+#guidelines a {
+  color: lightgrey;
 }
 
 #contribute {
   max-width: 80%;
   margin: 0 auto;
   text-align: center;
+  color: lightgray;
 }
 #contribute .container:nth-of-type(2) {
   text-align: left;
@@ -99,6 +105,11 @@ header .link-github svg path {
   list-style: none;
   width: 23%;
   height: 120px;
+  overflow: hidden;
+}
+
+#contribute .container h3 {
+  text-align: center;
 }
 
 .profile .container {
@@ -122,13 +133,14 @@ header .link-github svg path {
 .profile .container > a[href="/styles/css/main-stage.css"] {
   text-decoration: none;
   color: white;
-  background-color: gold;
+  background-color: #FCC224;
   padding: 3px;
   border-radius: 5px;
 }
 
 #styles .container h2 {
   text-align: center;
+  color: lightgrey;
 }
 
 #styles .container ul {
@@ -160,9 +172,22 @@ header .link-github svg path {
 #styles .container > a[href="/styles/"] {
   text-decoration: none;
   color: white;
-  background-color: gold;
+  background-color: #FCC224;
   padding: 3px;
   border-radius: 5px;
+}
+
+#files a {
+  background-color: #FCC224;
+  padding: 10px 10px;
+  border-radius: 10px;
+  margin: 60px;
+  text-decoration: none;
+  color: #fdfdfd;
+}
+
+#files .container h3 {
+  color: forestgreen;
 }
 
 .page-footer {

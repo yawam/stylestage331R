@@ -2,7 +2,9 @@
   max-width: 80%;
   margin: 0 auto;
   text-align: center;
-
+  color:lightgray;
+  
+  
   .container:nth-of-type(2) {
     text-align: left;
     h3 {
@@ -21,6 +23,13 @@
       list-style: none;
       width: 23%;
       height: 120px;
+      overflow: hidden;
     }
   }
 }
+
+#contribute .container h3 {
+  
+  text-align: center;
+}
+
