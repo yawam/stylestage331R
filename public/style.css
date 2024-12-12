@@ -1,6 +1,12 @@
 @charset "UTF-8";
 body {
-  background: linear-gradient(to bottom, black 0%, #333 55%, #ccc 75%, white 100%);
+  background: linear-gradient(
+    to bottom,
+    black 0%,
+    #333 55%,
+    #ccc 75%,
+    white 100%
+  );
   margin: 0 auto;
   max-width: 100%;
   padding: 3rem;
@@ -54,7 +60,8 @@ nav ul li a:hover::after {
 }
 
 @keyframes shake {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateX(0);
   }
   25% {
@@ -107,7 +114,8 @@ header .link-github svg path {
   fill: gold;
 }
 header a[href="https://twitter.com/5t3ph"],
-header a[href="https://moderncss.dev"] {
+header a[href="https://moderncss.dev"]
+{
   display: inline-block;
   color: #fff;
   background: linear-gradient(90deg, #ffd700, #ffb300);
@@ -120,12 +128,14 @@ header a[href="https://moderncss.dev"] {
   position: relative;
 }
 header a[href="https://twitter.com/5t3ph"]:hover,
-header a[href="https://moderncss.dev"]:hover {
+header a[href="https://moderncss.dev"]:hover
+{
   animation: shake 0.5s linear;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
 }
 header a[href="https://twitter.com/5t3ph"]:hover::after,
-header a[href="https://moderncss.dev"]:hover::after {
+header a[href="https://moderncss.dev"]:hover::after
+{
   content: "";
   position: absolute;
   top: 100%;
@@ -139,7 +149,8 @@ header a[href="https://moderncss.dev"]:hover::after {
   animation: dust-fall 2s ease-out infinite;
 }
 header a[href="https://twitter.com/5t3ph"]:hover::before,
-header a[href="https://moderncss.dev"]:hover::before {
+header a[href="https://moderncss.dev"]:hover::before
+{
   content: "";
   position: absolute;
   top: 100%;
@@ -215,7 +226,8 @@ header .link-github span::after {
   /* Space between SVG and line */
 }
 @keyframes shake {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateX(0);
   }
   25% {
@@ -412,7 +424,16 @@ a {
   height: 100%;
   pointer-events: none;
   animation: snowfall 8s infinite linear;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 4%, transparent 0) 10px 10px/30px 30px, radial-gradient(circle, rgba(255, 255, 255, 0.7) 4%, transparent 0) 50px 50px/40px 40px, radial-gradient(circle, rgba(255, 255, 255, 0.5) 4%, transparent 0) 80px 80px/35px 35px;
+  background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.9) 4%,
+        transparent 0
+      )
+      10px 10px/30px 30px,
+    radial-gradient(circle, rgba(255, 255, 255, 0.7) 4%, transparent 0) 50px
+      50px/40px 40px,
+    radial-gradient(circle, rgba(255, 255, 255, 0.5) 4%, transparent 0) 80px
+      80px/35px 35px;
 }
 
 @keyframes snowfall {
@@ -441,7 +462,8 @@ a {
   align-items: center;
 }
 #contribute .container:nth-of-type(2) li {
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 8px 10px -6px rgba(0, 0, 0, 0.1);
   padding: 0.5rem;
   border-radius: 0.5rem;
   background-color: forestgreen;
@@ -510,7 +532,8 @@ a {
 
 #styles .container ul li {
   border: 0.5 solid black;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 8px 10px -6px rgba(0, 0, 0, 0.1);
   background-color: lightgray;
   border-radius: 5px;
   text-decoration: none;
@@ -542,7 +565,6 @@ a {
   background: linear-gradient(90deg, #ffd700, #ffb300);
   padding: 5px 10px;
   border-radius: 5px;
-#files a {
   background-color: #fcc224;
   padding: 10px 10px;
   border-radius: 10px;
