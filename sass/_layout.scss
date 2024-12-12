@@ -8,11 +8,17 @@ $background-color: linear-gradient(
   white 100%
 );
 $background-color-2: red;
-$accent-color-1: #FCC224;
+$accent-color-1: #fcc224;
 $text-color: white;
 $secondary-text-color: black;
 $font-primary: "Inter", sans-serif;
 $box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+$gold-dust: radial-gradient(
+  circle,
+  gold 0%,
+  transparent 100%
+); // Gold dust effect
+$gold-dust-color: gold; // Gold dust color
 body {
   background: $background-color;
   margin: 0 auto;

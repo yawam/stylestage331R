@@ -29,14 +29,71 @@ nav ul {
   align-items: center;
 }
 nav ul li a {
-  color: white;
+  color: #fcc224;
   text-decoration: none;
+  position: relative;
+  display: inline-block;
+  transition: transform 0.2s;
+}
+nav ul li a:hover {
+  animation: shake 0.5s linear;
+}
+nav ul li a:hover::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  /* Below the link */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5px;
+  height: 5px;
+  background: radial-gradient(circle, gold 0%, transparent 100%);
+  animation: gold-dust 1s ease-out;
+  pointer-events: none;
+  opacity: 0;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+}
+@keyframes gold-dust {
+  0% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) translateY(20px);
+    opacity: 0;
+  }
+}
+.skip-link {
+  display: none;
 }
 
 header {
   color: white;
   padding: 3rem;
   text-align: center;
+  /* Gold bar appearance */
+  /* Hover effects */
+  /* Gold dust effect */
+  /* Center the link in the container */
+  /* Hover effects */
+  /* Style for the SVG inside the link */
+  /* Line separator between SVG and text */
+  /* Shake animation */
+  /* Dust fall animation */
 }
 header h1 {
   font-size: 5rem;
@@ -49,6 +106,142 @@ header .link-github svg {
 header .link-github svg path {
   fill: gold;
 }
+header a[href="https://twitter.com/5t3ph"],
+header a[href="https://moderncss.dev"] {
+  display: inline-block;
+  color: #fff;
+  background: linear-gradient(90deg, #ffd700, #ffb300);
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+header a[href="https://twitter.com/5t3ph"]:hover,
+header a[href="https://moderncss.dev"]:hover {
+  animation: shake 0.5s linear;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+header a[href="https://twitter.com/5t3ph"]:hover::after,
+header a[href="https://moderncss.dev"]:hover::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  /* Below the link */
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background-color: gold;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: dust-fall 2s ease-out infinite;
+}
+header a[href="https://twitter.com/5t3ph"]:hover::before,
+header a[href="https://moderncss.dev"]:hover::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  /* Below the link */
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background-color: gold;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: dust-fall 2s ease-out 0.5s infinite;
+  transform: translateX(10px);
+}
+header .link-github {
+  display: flex;
+  /* To position SVG and text side by side */
+  align-items: center;
+  justify-content: center;
+  /* Center text and SVG */
+  gap: 10px;
+  /* Space between SVG and text */
+  padding: 5px 10px;
+  /* Reduce padding for compact size */
+  background: linear-gradient(90deg, #302904, #ffb300);
+  /* Gold bar style */
+  color: #fff;
+  /* White text */
+  text-decoration: none;
+  border: none;
+  /* No outer border */
+  border-radius: 5px;
+  /* Rounded corners */
+  font-weight: bold;
+  width: 10%;
+  /* Reduce width to fit content */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  /* Subtle shadow */
+  transition: background-color 0.3s, transform 0.2s;
+  margin: 0 auto;
+  /* Center the link in the container */
+}
+header .link-github:hover {
+  animation: shake 0.5s linear;
+  /* Shake on hover */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+  /* More prominent shadow */
+}
+header .link-github svg {
+  flex-shrink: 0;
+  /* Prevent SVG from resizing */
+  width: 20px;
+  /* Adjust SVG size */
+  height: 20px;
+  fill: #fff;
+  /* White fill to match text */
+}
+header .link-github span {
+  display: flex;
+  /* To align content within span */
+  align-items: center;
+  position: relative;
+}
+header .link-github span::after {
+  content: "";
+  display: block;
+  width: 1px;
+  /* Thin border */
+  height: 70%;
+  /* Adjust height to align with text */
+  background-color: rgba(255, 255, 255, 0.7);
+  /* Semi-transparent white */
+  margin-left: 10px;
+  /* Space between SVG and line */
+}
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+}
+@keyframes dust-fall {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+}
 
 #about {
   width: 70%;
@@ -59,15 +252,83 @@ header .link-github svg path {
   gap: 3rem;
   align-items: center;
   padding: 1rem;
+  color: white;
+}
+#about a {
+  color: white;
 }
 #about .container {
   width: 50%;
   height: 100%;
-  border: 3px solid #FCC224;
-  background-color: red;
+  border: 3px solid #fcc224;
+  background: linear-gradient(to right, #b22222 0%, #8a1f1f 50%, #671f1f 100%);
   border-radius: 0.5rem;
   padding: 0.5rem;
   overflow-y: auto;
+  text-align: center;
+  /* Scrollbar styling */
+  scrollbar-width: thin;
+  /* For Firefox: Thin scrollbar */
+  scrollbar-color: rgba(0, 0, 0, 0.8) transparent;
+  /* Thumb and track colors */
+  /* WebKit Browsers (e.g., Chrome, Edge, Safari) */
+}
+#about .container::-webkit-scrollbar {
+  width: 6px;
+  /* Thin scrollbar */
+}
+#about .container::-webkit-scrollbar-track {
+  background: transparent;
+  /* Transparent track background */
+}
+#about .container::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.8);
+  /* Opaque black thumb */
+  border-radius: 3px;
+  /* Rounded corners for thumb */
+}
+#about .container::-webkit-scrollbar-thumb:hover {
+  background: black;
+  /* Fully opaque black on hover */
+}
+#about .container blockquote {
+  background: rgba(255, 255, 255, 0.41);
+  color: #fcc224;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 5px;
+}
+#about .container blockquote a {
+  color: #fcc224;
+}
+#about ul {
+  display: flex;
+  flex-wrap: wrap;
+  /* Allow wrapping of items to a new line */
+  gap: 0.5rem;
+  /* Add spacing between the list items */
+  list-style: none;
+  /* Remove default bullet points */
+  padding: 0;
+  /* Remove default padding */
+  margin: 0;
+  /* Remove default margin */
+}
+#about li {
+  background: forestgreen;
+  /* Set background to green */
+  color: white;
+  /* Optional: Set text color for contrast */
+  padding: 0.5rem;
+  /* Add padding inside each item */
+  border-radius: 5px;
+  /* Optional: Add rounded corners */
+  flex: 1 1 auto;
+  /* Allow items to grow, shrink, and set a minimum width */
+  text-align: center;
+  /* Optional: Center the text inside the items */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Optional: Add a subtle shadow */
 }
 
 /* General Styling */
@@ -231,7 +492,7 @@ a {
 .profile .container > a[href="/styles/css/main-stage.css"] {
   text-decoration: none;
   color: white;
-  background-color: #FCC224;
+  background-color: #fcc224;
   padding: 3px;
   border-radius: 5px;
 }
@@ -270,7 +531,7 @@ a {
 #styles .container > a[href="/styles/"] {
   text-decoration: none;
   color: white;
-  background-color: #FCC224;
+  background-color: #fcc224;
   padding: 3px;
   border-radius: 5px;
 }
@@ -281,6 +542,11 @@ a {
   background: linear-gradient(90deg, #ffd700, #ffb300);
   padding: 5px 10px;
   border-radius: 5px;
+#files a {
+  background-color: #fcc224;
+  padding: 10px 10px;
+  border-radius: 10px;
+  margin: 60px;
   text-decoration: none;
   font-weight: bold;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
