@@ -1,21 +1,107 @@
-// #guidelines {
-//   max-width: 80%;
-//   margin: 0 auto;
-//   text-align: center;
-//   color:lightgrey;
+#guidelines {
+  padding: 15px;
+  background: $nav-background;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  color: white;
+  font-size: 1rem;
+  margin:5px auto;
+  width:100%;
+  border: 3px solid $accent-color-1;
+  line-height: 1.5em;
+}
+
+#guidelines h2 {
+  font-size: 1.8rem;
+  
+  text-align: center;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+#guidelines h3 {
+  font-size: 1.4rem;
+        color: #5fb95f; /* Festive green */
+        margin-top: 15px;
+        margin-bottom: 10px;
+        text-align: center;
+}
+#guidelines a {
+  color: gold; 
+  text-decoration: underline;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+
+// /* Mobile styles for #guidelines */
+// @media (max-width: 768px) {
+//   #guidelines {
+//       padding: 10px;
+//       font-size: 1rem;
+//       line-height: 1.5;
+//   }
+
+//   #guidelines .container {
+//       padding: 15px;
+//       text-align: left; /* Better alignment for readability on smaller screens */
+//   }
+
+//   #guidelines h2 {
+//       font-size: 1.5rem;
+//       text-align: center; /* Center the header for balance */
+//       margin-bottom: 10px;
+//   }
+
+//   #guidelines h3 {
+//       font-size: 1.2rem;
+//       margin-top: 15px;
+//       margin-bottom: 10px;
+//   }
+
+//   #guidelines p {
+//       margin-bottom: 10px;
+//       font-size: 0.9rem;
+//       text-align: justify;
+//   }
+
+//   #guidelines a {
+//       color: #0073e6;
+//       text-decoration: underline;
+//       font-size: 0.9rem;
+//   }
+
+//   #guidelines .link-guidelines {
+//     color: rgb(88, 82, 82);
+//     margin:20px;
+//     background: linear-gradient(90deg, #ffd700, #ffb300);
+//     padding: 5px 15px;
+//     border-radius: 5px;
+//     text-decoration: none;
+//     font-weight: bold;
+//     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+//     transition: transform 0.2s, box-shadow 0.2s;
+//     position: relative;
+//     margin:0 60px;
+    
+     
+//   }
+
+//   #guidelines .link-guidelines:hover {
+//       background-color: #005bb5;
+//   }
 // }
 
-// #guidelines a{
-//   color:lightgrey;
-// }
-
-/* General Styling */
+@media (min-width: 750px){
 #guidelines,
 a {
   text-align: center;
   font-family: 'Arial', sans-serif;
   color: #5fb95f;
   position: relative;
+  line-height: 21spx;
+  background: none;
+  border:none;
 }
 
 /* Golden star at the top */
@@ -24,14 +110,14 @@ a {
   font-size: 3em;
   color: gold;
   position: absolute;
-  top: -20px;
+  top: 20px;
   left: 50%;
   transform: translateX(-50%);
 }
 
 /* Top of the tree */
 #guidelines h2 {
-  font-size: 1.8em;
+  font-size: 1.6em;
   color: #5fb95f; /* Deep green */
   margin-bottom: 10px;
 }
@@ -82,7 +168,9 @@ a {
   position: relative;
   overflow: hidden; 
 }
-
+#guidelines .container h3{
+  margin: 10px;
+}
 
 #guidelines .container::after {
   content: '';
@@ -92,10 +180,7 @@ a {
   width: 100%;
   height: 100%;
   pointer-events: none; 
-  // animation: snowfall 8s infinite linear; 
-  // background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 4%, transparent 0) 10px 10px / 30px 30px,
-  //   radial-gradient(circle, rgba(255, 255, 255, 0.7) 4%, transparent 0) 50px 50px / 40px 40px,
-  //   radial-gradient(circle, rgba(255, 255, 255, 0.5) 4%, transparent 0) 80px 80px / 35px 35px;
+
 }
 
 @keyframes snowfall {
@@ -106,5 +191,12 @@ a {
     background-position: 0 100vh, 0 110vh, 0 120vh;
   }
 }
+
+}
+  
+    
+    
+    
+
 
 

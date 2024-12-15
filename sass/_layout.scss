@@ -19,6 +19,12 @@ $gold-dust: radial-gradient(
   transparent 100%
 ); // Gold dust effect
 $gold-dust-color: gold; 
+$nav-background: linear-gradient(
+  to right,
+  #b22222 0%,
+  #8a1f1f 50%,
+  #671f1f 100%
+);
 
 body {
   background: $background-color;

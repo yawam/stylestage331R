@@ -1,3 +1,43 @@
+
+#about{
+  color: white;
+
+.container {
+  width: 100%;
+  height: auto;
+  border: 3px solid $accent-color-1;
+  background: $nav-background;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin-top:10px;
+  text-align: center;
+  line-height: 1.5em;
+  
+}
+a {
+  color: white;
+}
+ul {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 0.5rem; 
+  list-style: none; 
+  padding: 0; 
+  margin: 0; 
+}
+li {
+  background: rgb(27, 108, 27);
+  color: white; 
+  padding: 0.5rem; 
+  border-radius: 5px; 
+  flex: 1 1 auto; 
+  text-align: center; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+  
+}
+
+@media (min-width:768px){
 #about {
   width: 70%;
   height: 480px;
@@ -15,35 +55,16 @@
 
   .container {
     width: 50%;
-    height: 100%;
+    height: auto;
     border: 3px solid $accent-color-1;
     background: $nav-background;
     border-radius: 0.5rem;
     padding: 0.5rem;
-    overflow-y: auto;
+    margin-top:10px;
     text-align: center;
-
-    /* Scrollbar styling */
-    scrollbar-width: thin; 
-    scrollbar-color: rgba(0, 0, 0, 0.8) transparent; 
+    
 
     
-    &::-webkit-scrollbar {
-      width: 6px; 
-    }
-
-    &::-webkit-scrollbar-track {
-      background: transparent; 
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background: rgba(0, 0, 0, 0.8); 
-      border-radius: 3px; 
-    }
-
-    &::-webkit-scrollbar-thumb:hover {
-      background: rgba(0, 0, 0, 1); 
-    }
   }
 
   .container blockquote {
@@ -77,3 +98,8 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   }
 }
+}
+
+
+
+

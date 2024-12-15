@@ -1,3 +1,25 @@
+@media (max-width: 768px) {
+  header {
+      display: block;
+      padding: 10px;
+      text-align: center;
+  }
+  header .container h1 {
+      font-size: 1.5rem;
+      line-height: 1.5;
+  }
+  .link-github {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      text-align: center;
+  }
+}
+
+header .container p a {
+ margin:10px;
+}
+
 .skip-link {
   display: none;
 }
@@ -50,11 +72,12 @@ a[href="https://moderncss.dev"]:hover::after
   {
     content: "";
     position: absolute;
-    top: 100%; /* Below the link */
+    top: 100%; 
     left: 50%;
     width: 5px;
     height: 5px;
     background-color: gold;
+    
     border-radius: 50%;
     pointer-events: none;
     animation: dust-fall 2s ease-out infinite;
@@ -65,7 +88,7 @@ a[href="https://moderncss.dev"]:hover::before
   {
     content: "";
     position: absolute;
-    top: 100%; /* Below the link */
+    top: 100%; 
     left: 50%;
     width: 5px;
     height: 5px;
@@ -78,26 +101,26 @@ a[href="https://moderncss.dev"]:hover::before
 
   /* Center the link in the container */
   .link-github {
-    display: flex; /* To position SVG and text side by side */
+    display: flex; 
     align-items: center;
-    justify-content: center; /* Center text and SVG */
-    gap: 10px; /* Space between SVG and text */
-    padding: 5px 10px; /* Reduce padding for compact size */
-    background: linear-gradient(90deg, #302904, #ffb300); /* Gold bar style */
-    color: #fff; /* White text */
+    justify-content: center; 
+    gap: 10px; 
+    padding: 5px 10px; 
+    background: linear-gradient(90deg, #302904, #ffb300); 
+    color: #fff; 
     text-decoration: none;
     border: none; /* No outer border */
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 5px; 
     font-weight: bold;
-    width: 10%; /* Reduce width to fit content */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    width: 100px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
     transition: background-color 0.3s, transform 0.2s;
-    margin: 0 auto; /* Center the link in the container */
+    margin: 0 auto; 
   }
 
   /* Hover effects */
   .link-github:hover {
-    animation: shake 0.5s linear; /* Shake on hover */
+    animation: shake 0.5s linear; 
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4); /* More prominent shadow */
   }
 
@@ -122,7 +145,7 @@ a[href="https://moderncss.dev"]:hover::before
     width: 1px; /* Thin border */
     height: 70%; /* Adjust height to align with text */
     background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
-    margin-left: 10px; /* Space between SVG and line */
+    margin-left: 10px; 
   }
 
   /* Shake animation */
@@ -158,3 +181,7 @@ a[href="https://moderncss.dev"]:hover::before
     }
   }
 }
+
+
+
+

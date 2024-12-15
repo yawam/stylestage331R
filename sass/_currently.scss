@@ -1,102 +1,99 @@
 .profile .container {
   
-    max-width: 80%;
-    margin:0 auto;
-    text-align: center;
-    text-decoration: none;
-  }
-  
-  .profile .container h4 {
-    text-align: center;
-    color: forestgreen;
- font-size: 1.3rem; }
-  .profile .container ul {
-    display: flex;
-    justify-content: space-around;
-    margin:0 auto;
-    list-style: none;
-  }
-  .profile .container ul li{
-    display: inline-block;
-    color: rgb(88, 82, 82);
-    
-    background: linear-gradient(90deg, #ffd700, #ffb300);
-    padding: 5px 10px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s, box-shadow 0.2s;
-    position: relative;
-  }
+  max-width: 80%;
+  margin:0 auto;
+  text-align: center;
+  text-decoration: none;
+}
 
-  .profile .container ul li:hover
-  {
-    animation: shake 0.5s linear;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
-  }
-  .profile .container ul li:hover::after
-  {
-    content: "";
-    position: absolute;
-    top: 100%; /* Below the link */
-    left: 50%;
-    width: 5px;
-    height: 5px;
-    background-color: gold;
-    border-radius: 50%;
-    pointer-events: none;
-    animation: dust-fall 2s ease-out infinite;
-  }
+.profile .container h4 {
+  text-align: center;
+  color: forestgreen;
+font-size: 1.3rem; }
+.profile .container ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 0 auto;
+  max-width: 50%;
+  border: 3px solid $accent-color-1;
+  border-radius: 5px;
+  padding:10px;
+  background: $nav-background;
+  
+  
+  list-style: none;
+}
+.profile .container ul li{
+  display: inline-block;
+  color: rgb(88, 82, 82);
+  
+  background: linear-gradient(90deg, #ffd700, #ffb300);
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+.profile .container ul li span a{
+  color:rgb(27, 108, 27);
+}
+.profile .container ul li:hover
+{
+  animation: shake 0.5s linear;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+.profile .container ul li:hover::after
+{
+  content: "";
+  position: absolute;
+  top: 100%; /* Below the link */
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background-color: gold;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: dust-fall 2s ease-out infinite;
+}
 .profile .container ul li:hover::before
 {
-  content: "";
-  position: absolute;
-  top: 100%; /* Below the link */
-  left: 50%;
-  width: 5px;
-  height: 5px;
-  background-color: gold;
-  border-radius: 50%;
-  pointer-events: none;
-  animation: dust-fall 2s ease-out 0.5s infinite;
-  transform: translateX(10px);
+content: "";
+position: absolute;
+top: 100%; /* Below the link */
+left: 50%;
+width: 5px;
+height: 5px;
+background-color: gold;
+border-radius: 50%;
+pointer-events: none;
+animation: dust-fall 2s ease-out 0.5s infinite;
+transform: translateX(10px);
 }
 
-  .profile .container > a[href="/styles/css/main-stage.css"] {
-    
-    display: inline-block;
-    color: rgb(88, 82, 82);
-    
-    background: linear-gradient(90deg, #ffd700, #ffb300);
-    padding: 5px 10px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s, box-shadow 0.2s;
-    position: relative;
-    margin:20px;
+.profile .container > a[href="/styles/css/main-stage.css"] {
+  
+  display: inline-block;
+  color: rgb(88, 82, 82);
+  
+  background: linear-gradient(90deg, #ffd700, #ffb300);
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  margin:20px;
 }
 .profile .container > a[href="/styles/css/main-stage.css"]:hover
-  {
-    animation: shake 0.5s linear;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
-  }
-  .profile .container > a[href="/styles/css/main-stage.css"]:hover::after
-  {
-    content: "";
-    position: absolute;
-    top: 100%; /* Below the link */
-    left: 50%;
-    width: 5px;
-    height: 5px;
-    background-color: gold;
-    border-radius: 50%;
-    pointer-events: none;
-    animation: dust-fall 2s ease-out infinite;
-  }
-  .profile .container > a[href="/styles/css/main-stage.css"]:hover::before
+{
+  animation: shake 0.5s linear;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+.profile .container > a[href="/styles/css/main-stage.css"]:hover::after
 {
   content: "";
   position: absolute;
@@ -107,6 +104,35 @@
   background-color: gold;
   border-radius: 50%;
   pointer-events: none;
-  animation: dust-fall 2s ease-out 0.5s infinite;
-  transform: translateX(10px);
+  animation: dust-fall 2s ease-out infinite;
 }
+.profile .container > a[href="/styles/css/main-stage.css"]:hover::before
+{
+content: "";
+position: absolute;
+top: 100%; /* Below the link */
+left: 50%;
+width: 5px;
+height: 5px;
+background-color: gold;
+border-radius: 50%;
+pointer-events: none;
+animation: dust-fall 2s ease-out 0.5s infinite;
+transform: translateX(10px);
+}
+
+@media (max-width: 768px) {
+  .profile .container {
+      padding: 5px;
+  }
+  .profile .container ul {
+      grid-template-columns: 1fr;
+      gap: 10px;
+  }
+  .profile .container ul li {
+      font-size: 0.9rem;
+      padding: 5px;
+  }
+}
+
+
